@@ -1,0 +1,23 @@
+.header {
+    background-color: #003366; /* NASA blue background color */
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .nasa-logo {
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .nasa-name {
+    font-size: 24px;
+    color: #ffffff; /* White text color */
+  }
+  .nav-link {
+    margin-right: 20px; /* Adjust the margin as needed */
+    text-decoration: none; /* Remove the default link underline */
+  }
+  
+  
