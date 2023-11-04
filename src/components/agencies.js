@@ -45,7 +45,7 @@ class Agencies extends Component {
 
     return (
       <div>
-        <h1 class="text-4xl flex justify-center items-center">
+        <h1 className="text-4xl flex justify-center items-center">
           <strong>List of Space Agencies</strong>
         </h1>
         {error ? (
@@ -70,11 +70,11 @@ class Agencies extends Component {
         )}
 
         <div>
-          <p class="m-10">Page {currentPage} of {totalPages}</p>
-          <button class="bg-blue-500 hover-bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-10" onClick={() => this.handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
+          <p className="m-10">Page {currentPage} of {totalPages}</p>
+          <button className="bg-blue-500 hover-bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-10" onClick={() => this.handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
             Previous Page
           </button>
-          <button class="bg-blue-500 hover-bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" onClick={() => this.handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
+          <button className="bg-blue-500 hover-bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" onClick={() => this.handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
             Next Page
           </button>
         </div>

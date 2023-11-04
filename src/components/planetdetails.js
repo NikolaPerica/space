@@ -20,7 +20,7 @@ function PlanetDetails() {
   }, [id]);
 
   return (
-    <div>
+    <div className="p-4">
       {error ? (
         <p>Error: {error}</p>
       ) : planetData ? (
@@ -29,7 +29,8 @@ function PlanetDetails() {
             <strong>{planetData.englishName} Details</strong>
           </h1>
           
-          <h2 class="2xl" ><strong>{planetData.englishName}</strong></h2>
+          <h2 className="2xl" ><strong>{planetData.englishName}</strong></h2>
+          <img className="max-w-lg object-scale-down rounded" style={{ maxHeight: '1000px' }}  src={`/solar/${id}.jpg`}></img>
                 <p>Latin name: {planetData.name}</p>
                 <p>Mean temperature: {planetData.avgTemp} K ({planetData.avgTemp-273.15} °C)</p>
                 <p><strong>Moons</strong></p>
