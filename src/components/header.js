@@ -7,12 +7,12 @@ function Header() {
     <header className="header">
       
         <img
-          src="https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg"
+          src="/solar/pngtree-logo-space-image_321300-removebg-preview.png"
           alt="NASA Logo"
           className="nasa-logo"
         />
         <Link to="/" className="nav-link">
-            <h1 className="nasa-name">NASA</h1>
+            <h1 className="nasa-name">Home</h1>
         </Link>
         <Link to="/neofeed" className="nav-link">
             <h1 className="nasa-name">Near Earth Object Feed</h1>

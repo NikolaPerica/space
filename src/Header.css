@@ -1,5 +1,5 @@
 .header {
-    background-color: #003366; /* NASA blue background color */
+    background-color: #0b3d91; /* NASA blue background color */
     display: flex;
     align-items: center;
     padding: 10px;
@@ -13,7 +13,7 @@
   
   .nasa-name {
     font-size: 24px;
-    color: #ffffff; /* White text color */
+    color: #C0C0C0;
   }
   .nav-link {
     margin-right: 20px; /* Adjust the margin as needed */
