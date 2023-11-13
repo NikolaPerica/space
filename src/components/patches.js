@@ -4,7 +4,7 @@ import { Grid, Card, CardContent, Typography } from '@mui/material';
 
 const cardStyles = {
   height: '100%',
-  backgroundColor: 'transparent',
+  backgroundColor: 'rgba(0, 51, 102, 0.4)',
   boxShadow: 20
 };
 
@@ -60,8 +60,8 @@ class Patches extends Component {
 
     return (
       <div style={{ 
-        /* backgroundImage: `url("https://news.mit.edu/sites/default/files/images/202306/MIT-3q-FirstLight-01-press.jpg")`, */
-        backgroundColor: '#0b3d91',        
+        /* backgroundImage: `url("https://news.mit.edu/sites/default/files/images/202306/MIT-3q-FirstLight-01-press.jpg")`, 
+        backgroundColor: '#0b3d91',        */
         padding: '50px',
         paddingTop: '15px'
       }}>

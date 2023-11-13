@@ -618,10 +618,6 @@ video {
   }
 }
 
-.fixed {
-  position: fixed;
-}
-
 .m-10 {
   margin: 2.5rem;
 }
@@ -630,16 +626,16 @@ video {
   margin: 12rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
 }
 
 .flex {
@@ -714,12 +710,12 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.pl-20 {
-  padding-left: 5rem;
-}
-
 .pb-20 {
   padding-bottom: 5rem;
+}
+
+.pl-20 {
+  padding-left: 5rem;
 }
 
 .text-2xl {

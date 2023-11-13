@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import './output.css'
 import './index.css';
-import FlightList from './components/flightlist';
 import NeoFeed from './components/neofeed';
 import Header from './components/header';
 import NextLaunches from './components/nextlaunches';

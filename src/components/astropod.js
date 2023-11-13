@@ -32,7 +32,7 @@ class Astropod extends Component {
     }
 
     return (
-      <div className="h-96 flex m-48 flex-col items-center justify-center">
+      <div className="h-96 flex m-48 flex-col items-center justify-center" style={{color: '#C0C0C0'}}>
         <h1 className="text-3xl font-bold">{apodData.title}</h1>
         <img
           src={apodData.url}

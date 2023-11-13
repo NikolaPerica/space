@@ -1,8 +1,9 @@
 .header {
-    background-color: #0b3d91; /* NASA blue background color */
+    /* background-color: #0b3d91; /* NASA blue background color */ 
     display: flex;
     align-items: center;
     padding: 10px;
+  
   }
   
   .nasa-logo {
