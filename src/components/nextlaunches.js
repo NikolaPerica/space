@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Grid, Card, CardContent, Typography, Link } from '@mui/material';
-import { spacing } from '@mui/system';
+import { Grid, Card, CardContent, Typography } from '@mui/material';
 
-
+const cardStyles = {
+  height: '100%',
+  backgroundColor: 'rgba(0, 51, 102, 0.4)',
+  boxShadow: 20,
+  color: '#C0C0C0',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between', // Center content vertically
+};
 
 class NextLaunches extends Component {
   constructor() {
@@ -13,7 +20,6 @@ class NextLaunches extends Component {
       error: null,
     };
   }
-  
 
   componentDidMount() {
     axios
@@ -30,15 +36,15 @@ class NextLaunches extends Component {
     const { launches, error } = this.state;
 
     return (
-      <div >
-        <h1 className="text-4xl flex justify-center items-center"><strong>Next 5 Rocket Launches</strong></h1>
+      <div style={{ padding: '50px', paddingTop: '15px', color: '#C0C0C0', textAlign: 'center' }}>
+        <h1 className="text-4xl mb-10 pb-10"><strong>Next 5 Rocket Launches</strong></h1>
         <Grid container spacing={2}>
           {error ? (
             <p>Error: {error}</p>
           ) : (
             launches.map((launch) => (
               <Grid item xs={12} sm={6} md={4} key={launch.id}>
-                <Card sx={{ml: 5, mt: 5}} variant='outlined'>
+                <Card style={cardStyles}>
                   <CardContent>
                     <Typography variant="h6"><strong>{launch.name}</strong></Typography>
                     <Typography><strong>Provider:</strong> {launch.provider.name}</Typography>
@@ -55,8 +61,6 @@ class NextLaunches extends Component {
         </Grid>
       </div>
     );
-  
-  
   }
 }
 

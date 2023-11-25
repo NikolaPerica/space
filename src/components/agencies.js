@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';  // Import Link from react-router-dom
+import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { Grid, Card, CardContent, Typography } from '@mui/material';
+
+const cardStyles = {
+  height: '100%',
+  backgroundColor: 'rgba(0, 51, 102, 0.4)',
+  boxShadow: 20,
+  color: '#C0C0C0'
+};
 
 class Agencies extends Component {
   constructor() {
     super();
     this.state = {
       agencies: [],
-      currentPage: 1,  // Track the current page
-      totalPages: 1,  // Track the total number of pages
+      currentPage: 1,
+      totalPages: 1,
       error: null,
-      nextUrl: 'https://lldev.thespacedevs.com/2.2.0/agencies/',  // Initial URL
+      nextUrl: 'https://lldev.thespacedevs.com/2.2.0/agencies/',
     };
   }
 
@@ -20,14 +28,14 @@ class Agencies extends Component {
 
   fetchAgencies = (page) => {
     axios
-      .get(this.state.nextUrl)  // Use the nextUrl from the state
+      .get(this.state.nextUrl)
       .then((response) => {
         this.setState({
           agencies: response.data.results,
-          totalPages: Math.ceil(response.data.count / 10),  // Calculate total pages
+          totalPages: Math.ceil(response.data.count / 10),
           currentPage: page,
           error: null,
-          nextUrl: response.data.next,  // Update nextUrl for the next page
+          nextUrl: response.data.next,
         });
       })
       .catch((error) => {
@@ -40,33 +48,39 @@ class Agencies extends Component {
   }
 
   render() {
-    
     const { agencies, error, currentPage, totalPages } = this.state;
 
     return (
-      <div>
+      <div style={{ 
+        padding: '50px',
+        paddingTop: '15px',
+        color: '#C0C0C0' }}>
         <h1 className="text-4xl flex justify-center items-center">
           <strong>List of Space Agencies</strong>
         </h1>
         {error ? (
           <p>Error: {error}</p>
         ) : (
-          <ul className='pl-20'>
+          <Grid container spacing={2}>
             {agencies.map((agency) => (
-              <li key={agency.id}>
-                <h2 className='text-2xl'>
-                  <Link to={`/agency/${agency.id}`}>{/* Add Link to Agency Details */}
-                    <strong>{agency.name}</strong>
-                  </Link>
-                </h2>
-                {agency.logo_url ? (
-                  <img src={agency.logo_url} alt={`${agency.name} Logo`} style={{ maxWidth: '300px' }} />
-                ) : (
-                  <p>No Logo</p>
-                )}
-              </li>
+              <Grid item key={agency.id} xs={12} sm={6} md={4} lg={3}>
+                <Card Card elevated sx={{ boxShadow: 3 }} style={cardStyles}>
+                  <CardContent>
+                    <Typography variant="h5" component="div">
+                      <Link to={`/agency/${agency.id}`}>
+                        <strong>{agency.name}</strong>
+                      </Link>
+                    </Typography>
+                    {agency.logo_url ? (
+                      <img src={agency.logo_url} alt={`${agency.name} Logo`} style={{ maxWidth: '100%' }} />
+                    ) : (
+                      <p>No Logo</p>
+                    )}
+                  </CardContent>
+                </Card>
+              </Grid>
             ))}
-          </ul>
+          </Grid>
         )}
 
         <div>

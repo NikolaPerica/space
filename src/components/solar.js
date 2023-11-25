@@ -26,7 +26,7 @@ class Solar extends Component {
     const { planets, error } = this.state;
 
     return (
-      <div className="grid h-screen place-items-center" style={{padding: '25px'}}>
+      <div >
 
       <h1 className="text-3xl flex justify-center items-center"><strong>Planets and Their Moons</strong></h1>
 
@@ -45,7 +45,7 @@ class Solar extends Component {
           <area target="" alt="Sun" title="Sun" href="/planet/soleil" coords="111,296,94,411,74,464,1,465,2,0,37,4,90,90,107,172" shape="poly"></area>
       </map>
         <br></br>
-        {error ? (
+       {/* {error ? (
           <p>Error: {error}</p>
         ) : planets.length > 0 ? (
           <ul>
@@ -72,7 +72,7 @@ class Solar extends Component {
           </ul>
         ) : (
           <p>No planets data available.</p>
-        )}
+        )}*/}
       </div>
     );
   }

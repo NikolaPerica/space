@@ -55,7 +55,7 @@ class NeoFeed extends Component {
   };
 
   render() {
-    const { neoData, error, startDate, endDate } = this.state;
+    const { neoData, error, startDate } = this.state;
 
     return (
       <div style={{ 

@@ -65,7 +65,7 @@ class Patches extends Component {
         padding: '50px',
         paddingTop: '15px'
       }}>
-        <h1 className="text-4xl flex justify-center items-center mb-10 pb-20" style={{color: '#C0C0C0'}}><strong>List of Mission patches</strong></h1>
+        <h1 className="text-4xl flex justify-center items-center mb-10 pb-10" style={{color: '#C0C0C0'}}><strong>List of Mission patches</strong></h1>
         {error ? (
           <p>Error: {error}</p>
         ) : (

@@ -642,10 +642,6 @@ video {
   display: flex;
 }
 
-.grid {
-  display: grid;
-}
-
 .h-96 {
   height: 24rem;
 }
@@ -660,10 +656,6 @@ video {
 
 .flex-col {
   flex-direction: column;
-}
-
-.place-items-center {
-  place-items: center;
 }
 
 .items-center {
@@ -710,12 +702,8 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.pb-20 {
-  padding-bottom: 5rem;
-}
-
-.pl-20 {
-  padding-left: 5rem;
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 
 .text-2xl {
