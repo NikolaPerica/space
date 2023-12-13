@@ -14,6 +14,7 @@ import Patches from './components/patches';
 import AgencyDetail from './components/agencydetail';
 import PlanetDetails from './components/planetdetails';
 import { BrowserRouter as Router, Route, Link, Switch, Routes } from 'react-router-dom';
+import FlightList from './components/flightlist';
 
 
 
@@ -31,7 +32,8 @@ function App() {
         <Route path="/stations" element={<Stations />} />     
         <Route path="/patches" element={<Patches />} />  
         <Route path="/agency/:id" element={<AgencyDetail />} />   
-        <Route path="/planet/:id" element={<PlanetDetails />} />   
+        <Route path="/planet/:id" element={<PlanetDetails />} />  
+        <Route path="/flights" element={<FlightList />} /> 
       </Routes>
     </Router>
 );

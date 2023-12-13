@@ -5,37 +5,26 @@ class FlightList extends Component {
   constructor() {
     super();
     this.state = {
-      data: null, // Initialize data as null
-      error: null, // Initialize error as null
+      data: null,
+      error: null,
     };
   }
 
-  
-
   componentDidMount() {
-    // Replace 'YOUR_API_KEY' with your actual FlightAware API key
-    const apiKey = 'nGQs12sl50pc94piX4AxqLOa0NUbvrtk';
-    
-    // Construct the API URL for flight tracking data (replace with the desired endpoint)
-    const flightId = 'D82845'; // Replace with the desired flight ID
-   // const apiUrl = `https://aeroapi.flightaware.com/aeroapi/flight/track/${flightId}`;
-
-    // Set up headers with your API key
-    const headers = {
-      'Authorization': `Bearer ${apiKey}`,
-    };
-
-    const apiUrl = 'http://localhost:3001/aeroapi';
+    const apiUrl = 'http://localhost:5000/v1/flights';
 
     axios
-      .get(apiUrl, { headers })
+      .get(apiUrl)
       .then((response) => {
         this.setState({
-          data: response.data, // Assuming the API response is an object with flight tracking data
+          data: response.data,
         });
       })
       .catch((error) => {
         console.error('Error fetching flight data:', error);
+        this.setState({
+          error: 'Failed to fetch flight data',
+        });
       });
   }
 
@@ -43,7 +32,7 @@ class FlightList extends Component {
     const { data, error } = this.state;
 
     return (
-      <div id="renderiranje">
+      <div style={{color:'white'}}>
         <h1>Flight Tracking Data</h1>
         {error ? (
           <p>Error: {error}</p>
